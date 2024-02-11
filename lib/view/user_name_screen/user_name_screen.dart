@@ -3,7 +3,6 @@ import 'package:netflix/utils/color_constants.dart';
 import 'package:netflix/utils/database.dart';
 import 'package:netflix/utils/image_constants.dart';
 import 'package:netflix/view/bottom_nav_screen/bottom_nav_screen.dart';
-import 'package:netflix/view/home_screen/home_screen.dart';
 
 
 class UserNameScreen extends StatelessWidget {
