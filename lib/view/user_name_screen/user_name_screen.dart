@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:netflix/utils/color_constants.dart';
 import 'package:netflix/utils/database.dart';
 import 'package:netflix/utils/image_constants.dart';
+import 'package:netflix/view/home_screen/home_screen.dart';
 
 
 class UserNameScreen extends StatelessWidget {
@@ -43,7 +44,11 @@ class UserNameScreen extends StatelessWidget {
             itemBuilder: (context, index) => index <
                     DbData.userNameImages.length
                 ? InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(
+                          builder: (context) => HomeScreen(),));
+                    },
                     child: Column(
                       children: [
                         Container(
