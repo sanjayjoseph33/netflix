@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:netflix/utils/color_constants.dart';
 import 'package:netflix/utils/database.dart';
 import 'package:netflix/utils/image_constants.dart';
+import 'package:netflix/view/bottom_nav_screen/bottom_nav_screen.dart';
 import 'package:netflix/view/home_screen/home_screen.dart';
 
 
@@ -47,7 +48,8 @@ class UserNameScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context, MaterialPageRoute(
-                          builder: (context) => HomeScreen(),));
+                          builder: (context) => BottomNavScreen(),
+                          ));
                     },
                     child: Column(
                       children: [
@@ -72,33 +74,36 @@ class UserNameScreen extends StatelessWidget {
                       ],
                     ),
                   )
-                : Column(
-                    children: [
-                      SizedBox(
-                        height: 100,
-                        width: 100,
-                        child: Center(
-                          child: Container(
-                            height: 50,
-                            width: 50,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        ImageConstants.addButtonImage),
-                                    fit: BoxFit.cover)),
+                : InkWell(
+                  onTap: () {},
+                  child: Column(
+                      children: [
+                        SizedBox(
+                          height: 100,
+                          width: 100,
+                          child: Center(
+                            child: Container(
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          ImageConstants.addButtonImage),
+                                      fit: BoxFit.cover)),
+                            ),
                           ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        "Add",
-                        style: TextStyle(color: ColorConstants.mainWhite),
-                      )
-                    ],
-                  ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "Add",
+                          style: TextStyle(color: ColorConstants.mainWhite),
+                        )
+                      ],
+                    ),
+                ),
           ),
         ),
       ),
