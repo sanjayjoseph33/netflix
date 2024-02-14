@@ -57,7 +57,7 @@ class UserNameScreen extends StatelessWidget {
                           width: 100,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: Colors.amber,
+                              color: Colors.black,
                               image: DecorationImage(
                                   image: AssetImage(
                                       DbData.userNameImages[index]["image"]!),
